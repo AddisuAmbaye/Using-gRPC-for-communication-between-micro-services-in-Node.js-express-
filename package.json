@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
-  },
+    "start-degree": "node ./degree/main.js",
+    "start-processor": "node ./process/main.js",
+   "start": "concurrently 'npm run start-degree' 'npm run start-processor'"
+ },
   "author": "addis",
   "license": "ISC",
   "dependencies": {
